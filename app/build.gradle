@@ -1,0 +1,60 @@
+apply plugin: 'com.android.application'
+
+android {
+    signingConfigs {
+        config {
+            keyAlias 'syxgomanage'
+            keyPassword 'tangchujia'
+            storeFile file('/Users/tangchujia/Desktop/merchant/syxgomanage.jks')
+            storePassword 'tangchujia'
+        }
+    }
+    compileSdkVersion 25
+    buildToolsVersion "25.0.2"
+    defaultConfig {
+        applicationId "com.syxgo.electrombile"
+        minSdkVersion 19
+        targetSdkVersion 25
+        versionCode 22
+        versionName "2.4.5"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    allprojects {
+        repositories {
+            maven { url "https://jitpack.io" }
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:appcompat-v7:25.3.1'
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:design:25.1.0'
+    compile project(':libzxing')
+    compile 'com.squareup.okhttp3:okhttp:3.8.1'
+    compile 'com.alibaba:fastjson:1.2.35'
+    compile files('libs/systembartint-1.0.4.jar')
+    compile 'com.amap.api:3dmap:latest.integration'
+    compile 'com.amap.api:search:latest.integration'
+    compile 'com.amap.api:location:latest.integration'
+    compile project(':library')
+    compile 'com.inuker.bluetooth:library:1.4.0'
+    compile 'com.github.dongjunkun:DropDownMenu:1.0.3'
+    compile 'com.github.lzyzsd:circleprogress:1.2.1'
+    compile files('libs/AutoUpdate_SDK.jar')
+    compile 'com.google.code.gson:gson:2.8.2'
+    compile 'org.litepal.android:core:1.6.0'
+    compile 'com.lovedise:permissiongen:0.0.6'
+}

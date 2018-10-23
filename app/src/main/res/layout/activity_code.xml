@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="false"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:background="@color/color_black"
+        android:id="@+id/rl_top_dd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/tv_title_dd"
+            android:layout_width="wrap_content"
+            android:layout_height="50dip"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="title"
+            android:textColor="@color/colorWhite"
+            android:textSize="18dp" />
+
+        <ImageView
+            android:id="@+id/iv_back_dd"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dip"
+            android:src="@drawable/ic_back"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/tv_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="50dip"
+            android:layout_alignParentRight="true"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_marginRight="15dp"
+            android:gravity="center"
+            android:text="菜单"
+            android:textColor="@color/colorWhite"
+            android:textSize="14dp"
+            android:visibility="invisible" />
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_marginTop="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="50dp"
+            android:text="请输入发送至手机的6位验证码"
+            android:textColor="@color/color_black"
+            android:textSize="18dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="12dp"
+                android:layout_height="18dp"
+                android:layout_marginRight="7dp"
+                android:background="@drawable/ic_phone_small" />
+
+            <TextView
+                android:id="@+id/phone_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="188 8888 8888"
+                android:textColor="@color/color_black"
+                android:textSize="18dp" />
+        </LinearLayout>
+
+        <com.syxgo.electrombile.view.IdentifyingCodeView
+            android:id="@+id/codeview"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_gravity="center_horizontal"
+            app:icv_et_bg_focus="@drawable/shape_square_orange"
+            app:icv_et_bg_normal="@drawable/shape_square_black"
+            app:icv_et_number="6"
+            app:icv_et_text_color="@color/color_Orange"
+            app:icv_et_width="48dp"></com.syxgo.electrombile.view.IdentifyingCodeView>
+    </LinearLayout>
+    <Button
+        android:id="@+id/resend_btn"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="15dp"
+        android:background="@color/colorGray"
+        android:text="重发验证码"
+        android:textColor="@color/colorWhite"
+        android:textSize="16dp" />
+
+</RelativeLayout>

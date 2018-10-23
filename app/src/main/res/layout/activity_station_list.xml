@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/rl_top_dd"
+        layout="@layout/layout_top" />
+
+    <com.syxgo.electrombile.view.SwipyRefreshLayout
+        android:id="@+id/swipeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ExpandableListView
+            android:id="@+id/evdevice"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </com.syxgo.electrombile.view.SwipyRefreshLayout>
+
+</LinearLayout>

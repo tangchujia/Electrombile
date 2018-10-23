@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/rl_top_dd"
+        layout="@layout/layout_top" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_below="@id/rl_top_dd"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/order_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:text="订单ID："
+            android:textSize="18dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/order_created_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:text="创建时间："
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/order_update_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:text="更新时间："
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/order_paid_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:text="支付时间："
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/order_no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:text="订单编号："
+            android:textSize="16dp" />
+
+        <LinearLayout
+            android:id="@+id/layout_user_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:gravity="center_vertical"
+            android:background="@drawable/selector_btn"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <TextView
+                android:id="@+id/user_id"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:text="用户ID："
+                android:textColor="@color/colorWhite"
+                android:textSize="16dp" />
+
+            <TextView
+                android:layout_width="10dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/ic_right" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/order_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:text="订单状态："
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/order_subject"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:text="订单内容："
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/order_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:text="订单详细内容："
+            android:textSize="16dp"
+            android:visibility="gone"/>
+
+        <LinearLayout
+            android:id="@+id/layout_ride_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:background="@drawable/selector_btn"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <TextView
+                android:id="@+id/ride_id"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:text="消费订单关联的骑行id："
+                android:textColor="@color/colorWhite"
+                android:textSize="16dp" />
+
+            <TextView
+                android:layout_width="10dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/ic_right" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_bike_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:gravity="center_vertical"
+            android:background="@drawable/selector_btn"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <TextView
+                android:id="@+id/bike_id"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:text="消费订单关联的车辆id："
+                android:textColor="@color/colorWhite"
+                android:textSize="16dp" />
+
+            <TextView
+                android:layout_width="10dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/ic_right" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/provider_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:text="消费订单车辆所属供应商唯一标识："
+            android:textSize="16dp" />
+    </LinearLayout>
+</RelativeLayout>

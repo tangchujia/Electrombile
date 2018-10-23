@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/rl_top_dd"
+        layout="@layout/layout_top" />
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="5dp"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/num_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="创建数量"
+            android:imeActionLabel="创建数量"
+            android:imeOptions="actionUnspecified"
+            android:inputType="number"
+            android:maxLength="20"
+            android:maxLines="1"
+            android:singleLine="true" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <Button
+        android:id="@+id/create_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/selector_btn"
+        android:textColor="@color/colorWhite"
+        android:layout_margin="5dp"
+        android:text="创建" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/ecu_rv"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="10dp"
+        android:layout_weight="1"
+        android:visibility="gone">
+    </android.support.v7.widget.RecyclerView>
+</LinearLayout>

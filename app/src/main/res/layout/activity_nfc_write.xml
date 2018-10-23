@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/rl_top_dd"
+        layout="@layout/layout_top" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="5dp"
+            android:paddingTop="5dp">
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1">
+
+                <EditText
+                    android:id="@+id/bike_id_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="车辆ID"
+                    android:maxLength="6"
+                    android:textSize="18dp"
+                    android:inputType="number"
+                    android:imeActionLabel="车辆ID"
+                    android:imeOptions="actionUnspecified"
+                    android:maxLines="1" />
+            </android.support.design.widget.TextInputLayout>
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/pkgname_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:paddingTop="5dp"
+            android:text="包名："/>
+        <TextView
+            android:id="@+id/load_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:paddingTop="5dp"
+            android:text="下载地址："/>
+
+        <TextView
+            android:id="@+id/uri_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:paddingTop="5dp"
+            android:text="网址："/>
+
+        <CheckBox
+            android:layout_marginTop="10dp"
+            android:id="@+id/is_readonly_cb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:text="锁定标签" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/result_tv"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="20dp"
+        android:background="@drawable/shape_grey"
+        android:gravity="center"
+        android:text="编辑完成请将NFC标签或贴纸靠近手机背面"
+        android:textColor="@color/colorWhite"
+        android:textSize="18dp" />
+</LinearLayout>

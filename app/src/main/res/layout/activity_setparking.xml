@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="false"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:background="@color/color_black"
+        android:id="@+id/rl_top_dd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/tv_title_dd"
+            android:layout_width="wrap_content"
+            android:layout_height="50dip"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="title"
+            android:textColor="@color/colorWhite"
+            android:textSize="18dp" />
+
+        <ImageView
+            android:id="@+id/iv_back_dd"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dip"
+            android:src="@drawable/ic_back"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/tv_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="50dip"
+            android:layout_alignParentRight="true"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_marginRight="15dp"
+            android:gravity="center"
+            android:text="菜单"
+            android:textColor="@color/colorWhite"
+            android:textSize="14dp"
+            android:visibility="invisible" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="4"
+        android:orientation="vertical">
+
+        <com.amap.api.maps.MapView
+            android:id="@+id/bike_map"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></com.amap.api.maps.MapView>
+
+
+        <ImageView
+            android:id="@+id/location_img"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="10dp"
+            android:clickable="true"
+            android:src="@drawable/map_location_btn" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/add_marker_btn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="8dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector_btn"
+                    android:text="设置停车区域"
+                    android:textColor="@color/colorWhite" />
+
+                <Button
+                    android:id="@+id/center_marker_btn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="8dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector_btn"
+                    android:text="创建中心点"
+                    android:textColor="@color/colorWhite" />
+
+                <Button
+                    android:id="@+id/reset_marker_btn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector_btn"
+                    android:text="重置"
+                    android:textColor="@color/colorWhite" />
+            </LinearLayout>
+
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <EditText
+                    android:id="@+id/name_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="停车点名称"
+                    android:imeActionLabel="停车点名称"
+                    android:imeOptions="actionUnspecified"
+                    android:inputType="text"
+                    android:maxLength="20"
+                    android:maxLines="1" />
+            </android.support.design.widget.TextInputLayout>
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <EditText
+                    android:id="@+id/description_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="停车点描述"
+                    android:imeActionLabel="停车点描述"
+                    android:imeOptions="actionUnspecified"
+                    android:inputType="text"
+                    android:maxLength="30"
+                    android:maxLines="1" />
+            </android.support.design.widget.TextInputLayout>
+            <Button
+                android:id="@+id/add_parking_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/selector_btn"
+                android:text="完成"
+                android:textColor="@color/colorWhite" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

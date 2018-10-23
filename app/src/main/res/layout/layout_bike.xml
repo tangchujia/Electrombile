@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:padding="5dp">
+
+    <TextView
+        android:id="@+id/bike_id"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="车辆编号" />
+
+    <TextView
+        android:id="@+id/bike_battery"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="电量" />
+
+    <TextView
+        android:id="@+id/bike_lock"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="车锁状态" />
+
+    <TextView
+        android:id="@+id/bike_isrent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="是否租借" />
+
+    <TextView
+        android:id="@+id/bike_online"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="是否上线" />
+
+    <TextView
+        android:id="@+id/arrow_tv"
+        android:layout_width="10dp"
+        android:layout_height="15dp"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/ic_right"
+        android:visibility="invisible" />
+</LinearLayout>

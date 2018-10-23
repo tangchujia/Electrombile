@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp">
+
+        <com.github.lzyzsd.circleprogress.ArcProgress
+            android:id="@+id/item_progress"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_centerVertical="true"
+            custom:arc_angle="360"
+            custom:arc_finished_color="@color/color_Orange"
+            custom:arc_progress="56"
+            custom:arc_stroke_width="3dp"
+            custom:arc_suffix_text_padding="-3dp"
+            custom:arc_suffix_text_size="12dp"
+            custom:arc_text_color="@color/color_black"
+            custom:arc_text_size="18dp"
+            custom:arc_unfinished_color="@color/colorGray" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="15dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/bike_id_tv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:lines="1"
+                    android:text="车辆编号："
+                    android:textColor="@color/color_black"
+                    android:textSize="14dp"
+                    android:textStyle="bold" />
+
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/bike_date_tv"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:gravity="center_vertical"
+                android:text="上次骑行：" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/bike_distance_tv"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="45m"
+            android:textColor="@color/color_Orange"
+            android:textSize="14dp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#E8E8E8" />
+
+</LinearLayout>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<litepal>
+    <dbname value="CS"></dbname>
+
+    <version value="1"></version>
+
+    <list>
+        <mapping class="com.syxgo.electrombile.model.OrderData"></mapping>
+        <mapping class="com.syxgo.electrombile.model.BikeData"></mapping>
+        <mapping class="com.syxgo.electrombile.model.UserData"></mapping>
+        <mapping class="com.syxgo.electrombile.model.RideData"></mapping>
+
+    </list>
+</litepal>

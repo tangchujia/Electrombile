@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">运维管理端</string>
+    <string name="prompt_phone">手机号</string>
+    <string name="prompt_password">验证码</string>
+    <string name="action_sign_in">登录/注册</string>
+    <string name="action_sign_in_short">登录</string>
+    <string name="error_msg">数据请求失败！</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+    completions."
+     </string>
+    <string name="alphabet_and_number">abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_</string>
+</resources>
